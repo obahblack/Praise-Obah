@@ -67,6 +67,8 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 100px;
+  width: max-content;
+  max-width: calc(100vw - 32px);
   }
 
   .nav-logo {
@@ -74,6 +76,7 @@
   font-size: 20px;
   font-style: italic;
   margin-right: 16px;
+  white-space: nowrap;
   }
 
   .nav-links {
@@ -99,6 +102,7 @@
   font-size: 14px;
   font-weight: 500;
   border-radius: 100px;
+  white-space: nowrap;
   transition: transform 0.3s ease;
   }
 
@@ -420,6 +424,7 @@
   }
 
   .work-card.featured .work-thumb { aspect-ratio: 21/9; }
+  .work-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   .work-tags {
   display: flex;
@@ -636,8 +641,33 @@
   .t-name { font-size: 14px; font-weight: 500; color: var(--text); }
   .t-role { font-size: 12px; color: var(--muted); }
 
+  @media (max-width: 880px) {
+  .t-card { width: 360px; padding: 28px; gap: 20px; }
+  .t-quote-mark { font-size: 44px; }
+  .t-quote { font-size: 15px; }
+  .t-avatar { width: 38px; height: 38px; font-size: 16px; }
+  }
+
   @media (max-width: 640px) {
-  .t-card { width: 320px; padding: 24px; }
+  .t-card { width: 280px; padding: 22px; gap: 16px; }
+  .t-quote-mark { font-size: 36px; }
+  .t-quote { font-size: 14px; }
+  .t-avatar { width: 32px; height: 32px; font-size: 14px; }
+  .t-author { gap: 10px; }
+  .t-name { font-size: 13px; }
+  .t-role { font-size: 11px; }
+  .t-track { gap: 16px; }
+  }
+
+  @media (max-width: 480px) {
+  .t-card { width: 240px; padding: 18px; gap: 14px; }
+  .t-quote-mark { font-size: 28px; height: 18px; }
+  .t-quote { font-size: 13px; }
+  .t-avatar { width: 28px; height: 28px; font-size: 12px; }
+  .t-author { gap: 8px; padding-top: 6px; }
+  .t-name { font-size: 12px; }
+  .t-role { font-size: 10px; }
+  .t-track { gap: 12px; }
   }
 
   /* ───── Marquee ───── */
@@ -688,6 +718,22 @@
   @keyframes scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+  }
+
+  @media (max-width: 880px) {
+  .tool-chip { font-size: 24px; }
+  .tool-logo { width: 34px; height: 34px; }
+  .tool-sep { width: 14px; height: 14px; }
+  .marquee { padding: 40px 0; }
+  .marquee-track { gap: 44px; }
+  }
+
+  @media (max-width: 640px) {
+  .tool-chip { font-size: 20px; gap: 14px; }
+  .tool-logo { width: 28px; height: 28px; }
+  .tool-sep { width: 12px; height: 12px; }
+  .marquee { padding: 28px 0; }
+  .marquee-track { gap: 32px; }
   }
 
   /* ───── Contact ───── */
@@ -772,21 +818,47 @@
   }
 
   /* ───── Responsive ───── */
+  @media (min-width: 881px) {
+  .nav { min-width: 500px; }
+  }
+
+  @media (max-width: 880px) and (min-width: 550px) {
+  .nav { min-width: 550px; justify-content: space-between; }
+  }
+
+  @media (max-width: 549px) {
+  .nav { width: calc(100vw - 100px); max-width: calc(100vw - 100px); justify-content: space-between; }
+  }
+
   @media (max-width: 880px) {
-  .nav { padding: 6px 6px 6px 16px; gap: 4px; }
+  .nav { padding: 6px 6px 6px 16px; gap: 4px; max-width: calc(100vw - 24px); }
   .nav-logo { margin-right: 8px; font-size: 18px; }
   .nav-links { display: none; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .work-grid { grid-template-columns: 1fr; }
   .work-card.featured { grid-column: span 1; }
+  .work-card.featured .work-thumb { aspect-ratio: 16/10; }
   .service-row { grid-template-columns: 40px 1fr auto; }
   .service-desc { display: none; }
-  .exp-row { grid-template-columns: 80px 1fr; }
-  .exp-company, .exp-type { display: none; }
+  .service-row.active { grid-template-columns: 40px 1fr auto; }
+  .service-row.active .service-desc {
+  display: block;
+  grid-column: 1 / -1;
+  padding-top: 12px;
+  }
+  .exp-row { grid-template-columns: 80px 1fr auto; }
+  .exp-company { display: none; }
   .hero-meta { gap: 24px; }
   .meta-item .value { font-size: 22px; }
   .container { padding: 0 20px; }
   section { padding: 70px 0; }
+  .socials { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .social-link { white-space: nowrap; }
+  }
+
+  @media (max-width: 640px) {
+  .social-link { padding: 8px 14px; font-size: 12px; }
+  .socials { gap: 8px; }
   }
   .lightbox {
   position: fixed;
@@ -1076,8 +1148,8 @@
 
   <div class="work-grid">
     <article class="work-card featured reveal">
-    <div class="work-thumb" style="background:#0a0a0a; aspect-ratio: 21/8; display:block; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md);">
-    <img src="https://i.ibb.co/PZ4Ltc77/guild.png" alt="Guild Golf Carts featured project" style="position:absolute; left:0; bottom:-40px; width:100%; height:auto; display:block;">
+    <div class="work-thumb" style="background:#0a0a0a; border:1px solid rgba(255,255,255,0.15);">
+    <img src="https://i.ibb.co/PZ4Ltc77/guild.png" alt="Guild Golf Carts featured project" style="width:100%; height:100%; object-fit:cover; display:block;">
     </div>
     <div class="work-tags">
     <span class="tag">Marketing</span>
@@ -1095,8 +1167,8 @@
     </article>
 
     <article class="work-card reveal">
-    <div class="work-thumb" style="background:#0a0a0a; height:331px; display:block; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md);">
-    <img src="dream.png" alt="Pulse analytics platform" style="position:absolute; left:0; top:0; width:100%; height:auto; display:block;">
+    <div class="work-thumb" style="background:#0a0a0a; border:1px solid rgba(255,255,255,0.15);">
+    <img src="dream.png" alt="Pulse analytics platform">
     </div>
     <div class="work-tags">
     <span class="tag">Visa</span>
@@ -1109,8 +1181,8 @@
     </article>
 
     <article class="work-card reveal">
-    <div class="work-thumb" style="background:#0a0a0a; height:331px; display:block; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md);">
-    <img src="Lena.png" alt="Atlas travel app" style="position:absolute; left:0; top:0; width:100%; height:auto; display:block;">
+    <div class="work-thumb" style="background:#0a0a0a; border:1px solid rgba(255,255,255,0.15);">
+    <img src="Lena.png" alt="Atlas travel app">
     </div>
     <div class="work-tags">
     <span class="tag">EdTech</span>
@@ -1123,8 +1195,8 @@
     </article>
 
     <article class="work-card reveal">
-    <div class="work-thumb" style="background:#0a0a0a; height:331px; display:block; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md);">
-    <img src="SEO AI.png" alt="SEO Content AI dashboard" style="position:absolute; left:0; top:0; width:100%; height:auto; display:block;">
+    <div class="work-thumb" style="background:#0a0a0a; border:1px solid rgba(255,255,255,0.15);">
+    <img src="SEO AI.png" alt="SEO Content AI dashboard">
     </div>
     <div class="work-tags">
     <span class="tag">AI</span>
@@ -1137,8 +1209,8 @@
     </article>
 
     <article class="work-card reveal">
-    <div class="work-thumb" style="background:#0a0a0a; height:331px; display:block; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md);">
-    <img src="tbs.png" alt="Forma onboarding flow" style="position:absolute; left:0; top:0; width:100%; height:auto; display:block;">
+    <div class="work-thumb" style="background:#0a0a0a; border:1px solid rgba(255,255,255,0.15);">
+    <img src="tbs.png" alt="Forma onboarding flow">
     </div>
     <div class="work-tags">
     <span class="tag">Marketing</span>
@@ -1673,6 +1745,15 @@
   });
   document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') accessModal.classList.remove('open');
+  });
+
+  // Service row dropdown on mobile
+  document.querySelectorAll('.service-row').forEach((row) => {
+  row.addEventListener('click', () => {
+  if (window.innerWidth <= 880) {
+    row.classList.toggle('active');
+  }
+  });
   });
 
   // Clickable project cards
