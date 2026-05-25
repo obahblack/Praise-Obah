@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Praise Obah Product Designer</title>
+<meta name="description" content="UI/UX & Product Designer with 4+ years of experience crafting human-centered digital products." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/png" href="avatar.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+  --bg: #0e0e0e;
+  --bg-alt: #141414;
+  --surface: #1a1a1a;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #f5f3ee;
+  --muted: #8a8881;
+  --accent: #d6ff3d;
+  --accent-soft: rgba(214, 255, 61, 0.12);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --max: 1280px;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+  .container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px;
+  }
+
+  /* ───── Navigation ───── */
+  .nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 8px 20px;
+  background: rgba(20, 20, 20, 0.7);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 100px;
+  }
+
+  .nav-logo {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-style: italic;
+  margin-right: 16px;
+  }
+
+  .nav-links {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  }
+
+  .nav-links a {
+  padding: 8px 14px;
+  font-size: 14px;
+  color: var(--muted);
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  }
+
+  .nav-links a:hover { color: var(--text); background: var(--surface); }
+
+  .nav-cta {
+  padding: 10px 18px;
+  background: var(--accent);
+  color: #0e0e0e;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 100px;
+  transition: transform 0.3s ease;
+  }
+
+  .nav-cta:hover { transform: scale(1.05); }
+
+  /* ───── Hero ───── */
+  .hero {
+  padding: 100px 0 60px;
+  position: relative;
+  }
+
+  .hero-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 24 / 7;
+  border-radius: var(--radius-lg);
+  overflow: visible;
+  margin-bottom: 28px;
+  }
+
+  .hero-banner-img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  display: block;
+  }
+
+  .hero-avatar {
+  position: absolute;
+  left: 24px;
+  bottom: -56px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--bg);
+  z-index: 3;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  }
+
+  .hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  }
+
+  .hero-socials {
+  display: flex;
+  gap: 14px;
+  margin-left: 184px;
+  margin-top: 16px;
+  align-items: center;
+  min-height: 32px;
+  }
+
+  .social-icon {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  transition: transform 0.3s ease;
+  }
+  .social-icon:hover { transform: translateY(-2px); }
+
+  .hero-inner { position: relative; z-index: 1; padding-top: 40px; }
+
+  .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 32px;
+  }
+
+  .status-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--accent);
+  animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+  }
+
+  .hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(48px, 8vw, 120px);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  }
+
+  .hero h1 em {
+  font-style: italic;
+  color: var(--muted);
+  }
+
+  .hero-lede {
+  font-size: clamp(16px, 1.5vw, 20px);
+  color: var(--muted);
+  max-width: 560px;
+  margin-bottom: 40px;
+  }
+
+  .hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  }
+
+  @property --btn-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+  }
+
+  @keyframes btn-glow {
+  to { --btn-angle: 360deg; }
+  }
+
+  .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  }
+
+  .btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: conic-gradient(from var(--btn-angle), transparent 78%, var(--accent) 88%, #ffffff 92%, var(--accent) 96%, transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  }
+
+  .btn:hover::before {
+  opacity: 1;
+  animation: btn-glow 2.4s linear infinite;
+  }
+
+  .btn-primary {
+  background: var(--accent);
+  color: #0e0e0e;
+  }
+
+  .btn-primary::before {
+  background: conic-gradient(from var(--btn-angle), transparent 78%, #0e0e0e 88%, #ffffff 92%, #0e0e0e 96%, transparent 100%);
+  }
+
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(214, 255, 61, 0.25); }
+
+  .btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  }
+
+  .btn-secondary:hover { background: var(--bg-alt); border-color: rgba(255,255,255,0.16); }
+
+  .hero-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  }
+
+  .meta-item .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .meta-item .value { font-family: var(--serif); font-size: 28px; }
+
+  /* ───── Section ───── */
+  section { padding: 100px 0; position: relative; }
+
+  .section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 24px;
+  }
+
+  .eyebrow {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  }
+
+  .eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--muted);
+  }
+
+  .section-title {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  max-width: 720px;
+  }
+
+  .section-title em { font-style: italic; color: var(--muted); }
+
+  /* ───── About ───── */
+  .about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  }
+
+  .about-text p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 18px;
+  line-height: 1.6;
+  }
+
+  .about-text p strong { color: var(--text); font-weight: 500; }
+
+  .about-portrait {
+  aspect-ratio: 1/1;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  }
+
+  .about-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  }
+
+  /* ───── Work grid ───── */
+  .work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  }
+
+  .work-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  }
+
+  .work-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.16);
+  }
+
+  .work-card.featured { grid-column: span 2; }
+
+  .work-thumb {
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, #1e1e1e, #252525);
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  }
+
+  .work-thumb.gradient-1 { background: linear-gradient(135deg, #d6ff3d 0%, #4a5e10 100%); }
+  .work-thumb.gradient-2 { background: linear-gradient(135deg, #ff6b9d 0%, #4a1e30 100%); }
+  .work-thumb.gradient-3 { background: linear-gradient(135deg, #4d9fff 0%, #1a3a5e 100%); }
+  .work-thumb.gradient-4 { background: linear-gradient(135deg, #f4f1ea 0%, #807a6a 100%); }
+  .work-thumb.gradient-5 { background: linear-gradient(135deg, #b388ff 0%, #3b2466 100%); }
+
+  .work-thumb-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 48px;
+  color: rgba(0,0,0,0.3);
+  }
+
+  .work-card.featured .work-thumb { aspect-ratio: 21/9; }
+
+  .work-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  }
+
+  .tag {
+  padding: 4px 12px;
+  background: var(--surface);
+  border-radius: 100px;
+  font-size: 12px;
+  color: var(--muted);
+  }
+
+  .work-card h3 {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  }
+
+  .work-card p {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 20px;
+  }
+
+  .work-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+  transition: gap 0.3s ease;
+  cursor: pointer;
+  }
+
+  .work-card:hover .work-link { gap: 14px; border-color: var(--accent); }
+
+  /* ───── Services ───── */
+  .services-list {
+  border-top: 1px solid var(--border);
+  }
+
+  .service-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 1.5fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+  transition: padding 0.3s ease;
+  }
+
+  .service-row:hover { padding-left: 16px; }
+
+  .service-num {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--muted);
+  font-size: 18px;
+  }
+
+  .service-name {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  }
+
+  .service-desc {
+  color: var(--muted);
+  font-size: 15px;
+  }
+
+  .service-arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease;
+  }
+
+  .service-row:hover .service-arrow {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0e0e0e;
+  transform: rotate(-45deg);
+  }
+
+  /* ───── Experience ───── */
+  #experience {
+  background: var(--accent);
+  color: #0e0e0e;
+  }
+
+  #experience .eyebrow { color: rgba(14,14,14,0.9); }
+  #experience .eyebrow::before { background: rgba(14,14,14,0.9); }
+  #experience .section-title { color: #0e0e0e; }
+  #experience .section-title em { color: rgba(14,14,14,0.75); }
+
+  .exp-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(14,14,14,0.3); }
+
+  .exp-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 1fr 140px;
+  gap: 32px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(14,14,14,0.3);
+  }
+
+  .exp-year { font-family: var(--serif); font-style: italic; color: rgba(14,14,14,0.9); font-size: 18px; }
+  .exp-role { font-size: 18px; font-weight: 500; color: #0e0e0e; }
+  .exp-company { color: rgba(14,14,14,0.9); font-size: 15px; }
+  .exp-location { font-size: 12px; color: rgba(14,14,14,0.6); margin-top: 2px; font-weight: 400; }
+  .exp-type {
+  justify-self: end;
+  padding: 4px 12px;
+  background: #0e0e0e;
+  border-radius: 100px;
+  font-size: 12px;
+  color: var(--accent);
+  }
+
+  /* ───── Testimonials ───── */
+  .testimonials {
+  padding: 100px 0 120px;
+  overflow: hidden;
+  }
+
+  .testimonials .section-header { padding: 0 32px; max-width: var(--max); margin-left: auto; margin-right: auto; }
+
+  .t-scroller {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  }
+
+  .t-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: t-scroll 60s linear infinite;
+  }
+
+  .t-track:hover { animation-play-state: paused; }
+
+  @keyframes t-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+  }
+
+  .t-card {
+  flex-shrink: 0;
+  width: 420px;
+  padding: 32px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .t-card:hover { border-color: rgba(255,255,255,0.16); transform: translateY(-2px); }
+
+  .t-quote-mark {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 56px;
+  line-height: 0.5;
+  color: var(--accent);
+  height: 24px;
+  }
+
+  .t-quote {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  }
+
+  .t-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  }
+
+  .t-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--accent);
+  flex-shrink: 0;
+  }
+
+  .t-author-meta { display: flex; flex-direction: column; gap: 2px; }
+  .t-name { font-size: 14px; font-weight: 500; color: var(--text); }
+  .t-role { font-size: 12px; color: var(--muted); }
+
+  @media (max-width: 640px) {
+  .t-card { width: 320px; padding: 24px; }
+  }
+
+  /* ───── Marquee ───── */
+  .marquee {
+  overflow: hidden;
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--accent);
+  }
+
+  .marquee-track {
+  display: flex;
+  gap: 64px;
+  animation: scroll 50s linear infinite;
+  width: max-content;
+  align-items: center;
+  }
+
+  .tool-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0e0e0e;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: -0.01em;
+  }
+
+  .tool-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+  }
+
+  .tool-sep {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+  background: #0e0e0e;
+  border-radius: 4px;
+  }
+
+  @keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+  }
+
+  /* ───── Contact ───── */
+  .contact {
+  text-align: center;
+  padding: 140px 0;
+  }
+
+  .contact h2 {
+  font-family: var(--serif);
+  font-size: clamp(48px, 9vw, 140px);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+  }
+
+  .contact h2 em { font-style: italic; color: var(--muted); }
+
+  .contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  padding: 16px 28px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  margin-bottom: 60px;
+  transition: all 0.3s ease;
+  }
+
+  .contact-email:hover {
+  background: var(--accent);
+  color: #0e0e0e;
+  border-color: var(--accent);
+  }
+
+  .socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  }
+
+  .social-link {
+  padding: 10px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 14px;
+  color: var(--muted);
+  transition: all 0.3s ease;
+  }
+
+  .social-link:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+
+  /* ───── Footer ───── */
+  footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+  }
+
+  .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  }
+
+  /* ───── Reveal ───── */
+  .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  }
+
+  /* ───── Responsive ───── */
+  @media (max-width: 880px) {
+  .nav { padding: 6px 6px 6px 16px; gap: 4px; }
+  .nav-logo { margin-right: 8px; font-size: 18px; }
+  .nav-links { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .work-grid { grid-template-columns: 1fr; }
+  .work-card.featured { grid-column: span 1; }
+  .service-row { grid-template-columns: 40px 1fr auto; }
+  .service-desc { display: none; }
+  .exp-row { grid-template-columns: 80px 1fr; }
+  .exp-company, .exp-type { display: none; }
+  .hero-meta { gap: 24px; }
+  .meta-item .value { font-size: 22px; }
+  .container { padding: 0 20px; }
+  section { padding: 70px 0; }
+  }
+  .lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 24px;
+  }
+  .lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+  }
+  .lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  object-fit: contain;
+  }
+  .lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  }
+  .lightbox-close:hover { opacity: 1; }
+
+  .access-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 24px;
+  }
+  .access-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+  }
+  .access-modal-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  }
+  .access-modal-card h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: var(--text);
+  }
+  .access-modal-card p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  }
+  .access-modal-card .btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  }
+  .access-modal-card .btn-primary {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  margin-bottom: 12px;
+  }
+  .access-modal-card .btn-primary:hover {
+  background: #c8f03a;
+  }
+  .access-modal-card .btn-ghost {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 14px;
+  }
+  .access-modal-card .btn-ghost:hover {
+  color: var(--text);
+  }
+  .access-modal-card .btn-book {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  width: 100%;
+  padding: 14px 32px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 12px;
+  }
+  .access-modal-card .btn-book:hover {
+  background: #c8f03a;
+  }
+  .access-modal-card .btn-close-modal {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: center;
+  }
+  .access-modal-card .btn-close-modal:hover {
+  color: var(--text);
+  }
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+  <span class="nav-logo">Praise Obah</span>
+  <ul class="nav-links">
+  <li><a href="#work">Work</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#experience">Experience</a></li>
+  <li><a href="#services">Services</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Let's talk →</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+  <div class="container">
+  <div class="hero-banner">
+    <img class="hero-banner-img" src="banner.png" alt="Featured product design mobile app mockups">
+    <div class="hero-avatar">
+    <img src="avatar.png" alt="Portrait of Praise Obah">
+    </div>
+  </div>
+
+  <div class="hero-socials">
+    <a href="https://www.linkedin.com/in/praise-obah" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+    <svg width="24" height="24" viewBox="0 0 24 24"><rect x="0" y="0" width="24" height="24" rx="5" fill="#0A66C2"/><path d="M6.94 8.82H6.9a1.3 1.3 0 0 1-.93-.37 1.27 1.27 0 0 1 .02-1.84 1.34 1.34 0 0 1 .95-.38c.37 0 .68.13.92.38.25.25.37.56.37.93 0 .37-.13.68-.39.93a1.3 1.3 0 0 1-.9.35zM6.15 18.1V10.6H7.7v7.5H6.15zm8.78-7.66c.52.37.93.9 1.22 1.59.3.69.44 1.47.44 2.35v3.8h-1.47v-3.53c0-.63-.12-1.13-.37-1.5a1.2 1.2 0 0 0-1.04-.51c-.42 0-.76.14-1.02.43a1.98 1.98 0 0 0-.52 1.07c-.04.2-.06.47-.06.82v3.22H9.87v-7.5h1.4v1.15c.43-.55.93-.9 1.5-1.06.38-.1.77-.15 1.17-.15.6 0 1.13.15 1.6.45z" fill="#fff"/></svg>
+    </a>
+    <a href="https://www.behance.net/praiseobah" target="_blank" rel="noopener" class="social-icon" aria-label="Behance">
+    <img src="https://static.wikia.nocookie.net/adobe/images/4/45/B%C4%93hance_icon.jpeg/revision/latest?cb=20191023111224" alt="Behance" width="24" height="24" style="border-radius: 3px;">
+    </a>
+    <a href="mailto:obahsomto@gmail.com" class="social-icon" aria-label="Email">
+    <svg width="24" height="24" viewBox="0 0 24 22"><rect x="1" y="1" width="22" height="20" rx="3" fill="#fff" stroke="#e0e0e0"/><path d="M2 3l10 8 10-8" stroke="#ea4335" stroke-width="2.2" fill="none" stroke-linejoin="round"/><path d="M2 3v16h3V7l7 5.6L19 7v12h3V3l-10 8z" fill="#ea4335"/></svg>
+    </a>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-badge">
+    <span class="status-dot"></span>
+    Available for new projects
+    </div>
+
+    <div class="about-grid">
+    <div class="about-text">
+    <div class="eyebrow" style="margin-bottom: 20px;">About</div>
+    <h2 class="section-title" style="margin-bottom: 32px;">Hi! I'm Praise Obah</h2>
+    <p>
+      I specialize in creating <span style="color: var(--accent);">websites and digital products</span>
+      that don't just look amazing 💡 they drive results. 💼✨
+    </p>
+    <p>
+      From intuitive designs to seamless user experiences, I help
+      businesses stand out, engage their audience, and achieve their goals. 🚀
+    </p>
+    <div class="hero-actions" style="margin-top: 32px;">
+      <a href="mailto:obahsomto@gmail.com" class="btn btn-primary">Get in touch →</a>
+      <a href="https://drive.google.com/file/d/1p4j-6Jt6zpG4SyP9juyida1Ya-mSd6JV/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary">View Resume</a>
+    </div>
+    </div>
+    <div class="about-portrait">
+    <img src="about.png" alt="Designing in Figma at my workspace">
+    </div>
+    </div>
+
+    <div class="hero-meta">
+    <div class="meta-item">
+    <div class="label">Experience</div>
+    <div class="value">4+ years</div>
+    </div>
+    <div class="meta-item">
+    <div class="label">Projects shipped</div>
+    <div class="value">20+</div>
+    </div>
+    <div class="meta-item">
+    <div class="label">Based in</div>
+    <div class="value">Remote · GMT+1</div>
+    </div>
+    <div class="meta-item">
+    <div class="label">Currently</div>
+    <div class="value">Product Designer</div>
+    </div>
+    <div class="meta-item">
+    <div class="label">Plus</div>
+    <div class="value">Claude design expert</div>
+    </div>
+    </div>
+  </div>
+  </header>
+
+  <!-- MARQUEE tools I use -->
+  <div class="marquee">
+  <div class="marquee-track">
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/figma/F24E1E" alt="">Figma</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/framer/000000" alt="">Framer</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/claude" alt="">Claude Code</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" alt="">ChatGPT</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/discord/5865F2" alt="">Discord</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/miro/050038" alt="">Miro</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/notion/000000" alt="">Notion</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/linear/5E6AD2" alt="">Linear</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/slack.svg" alt="">Slack</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/cursor/000000" alt="">Cursor</div>
+  <div class="tool-sep"></div>
+
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/figma/F24E1E" alt="">Figma</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/framer/000000" alt="">Framer</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/claude" alt="">Claude Code</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg" alt="">ChatGPT</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/discord/5865F2" alt="">Discord</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/miro/050038" alt="">Miro</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/notion/000000" alt="">Notion</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/linear/5E6AD2" alt="">Linear</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/slack.svg" alt="">Slack</div>
+  <div class="tool-sep"></div>
+  <div class="tool-chip"><img class="tool-logo" src="https://cdn.simpleicons.org/cursor/000000" alt="">Cursor</div>
+  <div class="tool-sep"></div>
+  </div>
+  </div>
+
+
+  <!-- WORK -->
+  <section id="work">
+  <div class="container">
+  <div class="section-header reveal">
+    <div>
+    <div class="eyebrow">Selected work</div>
+    <h2 class="section-title">Featured <em>projects</em></h2>
+    </div>
+     <a href="https://www.behance.net/praiseobah" target="_blank" rel="noopener" class="btn btn-secondary">View Older projects →</a>
+  </div>
+
+  <div class="work-grid">
+    <article class="work-card featured reveal">
+    <div class="work-thumb" style="background:#0a0a0a; aspect-ratio: 21/8; display:block; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md);">
+    <img src="https://i.ibb.co/PZ4Ltc77/guild.png" alt="Guild Golf Carts featured project" style="position:absolute; left:0; bottom:-40px; width:100%; height:auto; display:block;">
+    </div>
+    <div class="work-tags">
+    <span class="tag">Marketing</span>
+    <span class="tag">E-commerce</span>
+    <span class="tag">CRM Dashboard</span>
+    </div>
+    <h3>Guild Golf Cart Website & CRM Dashboard</h3>
+    <p>
+    Designed a full marketing website and internal CRM dashboard for Guild Golf Carts
+      a brand with 5 locations across 4 US states. The e-commerce functionality
+    was built to drive sales beyond their physical footprint, while the CRM
+    streamlined fleet management, customer relations, and day-to-day operations.
+    </p>
+    <a href="https://guildgolfcarts.com/" target="_blank" rel="noopener" class="work-link">Visit website <span>→</span></a>
+    </article>
+
+    <article class="work-card reveal">
+    <div class="work-thumb" style="background:#0a0a0a; height:331px; display:block; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md);">
+    <img src="dream.png" alt="Pulse analytics platform" style="position:absolute; left:0; top:0; width:100%; height:auto; display:block;">
+    </div>
+    <div class="work-tags">
+    <span class="tag">Visa</span>
+    <span class="tag">SaaS</span>
+    <span class="tag">Dashboard</span>
+    </div>
+    <h3>Dream Alliance: visa application dashboard.</h3>
+          <p>Led and streamlined a complex phased visa process into a seamless operation for clients and internal processing teams.</p>
+    <span class="work-link">Request access <span>→</span></span>
+    </article>
+
+    <article class="work-card reveal">
+    <div class="work-thumb" style="background:#0a0a0a; height:331px; display:block; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md);">
+    <img src="Lena.png" alt="Atlas travel app" style="position:absolute; left:0; top:0; width:100%; height:auto; display:block;">
+    </div>
+    <div class="work-tags">
+    <span class="tag">EdTech</span>
+    <span class="tag">Marketing</span>
+    <span class="tag">Web App</span>
+    </div>
+    <h3>Lena Africa</h3>
+          <p>Collaborated on the design of the <a href="https://lena.africa/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline;">marketing site</a> and helped design, audit, and test the student application for the Lena school learning and management platform.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.lena.app.student" target="_blank" rel="noopener" class="work-link">View Application <span>→</span></a>
+    </article>
+
+    <article class="work-card reveal">
+    <div class="work-thumb" style="background:#0a0a0a; height:331px; display:block; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md);">
+    <img src="seo.png" alt="Halcyon design system" style="position:absolute; left:0; top:0; width:100%; height:auto; display:block;">
+    </div>
+    <div class="work-tags">
+    <span class="tag">AI</span>
+    <span class="tag">SaaS</span>
+    <span class="tag">Dashboard</span>
+    </div>
+    <h3>SEO Content AI dashboard</h3>
+    <p>Simplified the platform so users can navigate, generate content, build AI sites, and launch templates handling the full design workload end to end.</p>
+    <span class="work-link">Request access <span>→</span></span>
+    </article>
+
+    <article class="work-card reveal">
+    <div class="work-thumb" style="background:#0a0a0a; height:331px; display:block; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md);">
+    <img src="tbs.png" alt="Forma onboarding flow" style="position:absolute; left:0; top:0; width:100%; height:auto; display:block;">
+    </div>
+    <div class="work-tags">
+    <span class="tag">Marketing</span>
+    <span class="tag">E-commerce</span>
+    <span class="tag">Web Design</span>
+    </div>
+    <h3>Texas Backyard structures Website</h3>
+    <p>Built a highly optimized site with a strong social presence, making it easy for customers to find what they need.</p>
+    <a href="https://texasbackyardstructures.com/" target="_blank" rel="noopener" class="work-link">Visit website <span>→</span></a>
+    </article>
+  </div>
+  </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+  <div class="container">
+  <div class="section-header reveal">
+    <div>
+    <div class="eyebrow">Experience</div>
+    <h2 class="section-title">Where I've <em>spent my time.</em></h2>
+    </div>
+  </div>
+
+  <div class="exp-list reveal">
+    <div class="exp-row">
+    <div class="exp-year">2025 - Now</div>
+    <div class="exp-role">Product Designer</div>
+    <div class="exp-company">
+    SEO Content AI
+    <div class="exp-location">California, USA</div>
+    </div>
+    <div class="exp-type">Full-time</div>
+    </div>
+    <div class="exp-row">
+    <div class="exp-year">2025 - Now</div>
+    <div class="exp-role">Product Designer</div>
+    <div class="exp-company">
+    White Label Resell
+    <div class="exp-location">California, USA</div>
+    </div>
+    <div class="exp-type">Full-time</div>
+    </div>
+    <div class="exp-row">
+    <div class="exp-year">2024 - 2025</div>
+    <div class="exp-role">Product Designer</div>
+    <div class="exp-company">
+    Lena Africa
+    <div class="exp-location">Lagos, Nigeria</div>
+    </div>
+    <div class="exp-type">Full-time</div>
+    </div>
+    <div class="exp-row">
+    <div class="exp-year">2023 - 2024</div>
+    <div class="exp-role">UI/UX Designer</div>
+    <div class="exp-company">
+    Bounty Realm
+    <div class="exp-location">Remote</div>
+    </div>
+    <div class="exp-type">Full-time</div>
+    </div>
+    <div class="exp-row">
+    <div class="exp-year">2022 - Now</div>
+    <div class="exp-role">Freelance UI/UX Designer</div>
+    <div class="exp-company">
+    Multiple clients
+    <div class="exp-location">Remote</div>
+    </div>
+    <div class="exp-type">Freelance</div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="testimonials">
+  <div class="section-header reveal" style="margin-bottom: 48px; justify-content: center; text-align: center;">
+  <div>
+    <div class="eyebrow" style="justify-content: center;">Testimonials</div>
+    <h2 class="section-title" style="margin: 0 auto;">Kind words from <em>past collaborators.</em></h2>
+  </div>
+  </div>
+
+  <div class="t-scroller">
+  <div class="t-track">
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise brought a rare level of craft and intentionality to our product. Every screen he touched felt more polished and more human.</p>
+    <div class="t-author">
+    <div class="t-avatar">M</div>
+    <div class="t-author-meta">
+      <span class="t-name">Mubarak Idoko</span>
+      <span class="t-role">Co-founder · Lena Africa</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Working with Praise was seamless. He understood our vision quickly and translated it into a beautiful, functional product.</p>
+    <div class="t-author">
+    <div class="t-avatar">O</div>
+    <div class="t-author-meta">
+      <span class="t-name">Osaro Adade</span>
+      <span class="t-role">Co-founder · Lena Africa</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise's designs made the development process smooth. Clear handoffs, thoughtful states, and a keen eye for detail on every page.</p>
+    <div class="t-author">
+    <div class="t-avatar">D</div>
+    <div class="t-author-meta">
+      <span class="t-name">Daniel Ekechukwu</span>
+      <span class="t-role">Full-stack Dev · Dream Alliance</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise redesigned our entire site and gave Royal Eagle Care a fresh, trustworthy online presence. Our clients noticed immediately.</p>
+    <div class="t-author">
+    <div class="t-avatar">F</div>
+    <div class="t-author-meta">
+      <span class="t-name">Felicia Adeniyi</span>
+      <span class="t-role">Founder · Royal Eagle Care</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">A designer who thinks like an engineer. Praise's work on the SEO Content AI dashboard was pixel-perfect and implementation-ready.</p>
+    <div class="t-author">
+    <div class="t-avatar">M</div>
+    <div class="t-author-meta">
+      <span class="t-name">Mcjethro Kalu</span>
+      <span class="t-role">Frontend Dev · SEO Content AI</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise elevated our brand's digital presence significantly. His design sensibility and attention to detail set a new bar for our team.</p>
+    <div class="t-author">
+    <div class="t-avatar">H</div>
+    <div class="t-author-meta">
+      <span class="t-name">Himanshu Raikwar</span>
+      <span class="t-role">Digital Design Lead · White Label Resell</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Great energy, great design sense. Praise made our collaboration effortless and delivered work that exceeded expectations.</p>
+    <div class="t-author">
+    <div class="t-avatar">A</div>
+    <div class="t-author-meta">
+      <span class="t-name">Ankush Singh</span>
+      <span class="t-role">UI/UX Designer · White Label Resell</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise consistently delivered high-quality UI work. His designs were intuitive and made the dev handoff straightforward every time.</p>
+    <div class="t-author">
+    <div class="t-avatar">Z</div>
+    <div class="t-author-meta">
+      <span class="t-name">Zubair Muhammed</span>
+      <span class="t-role">UI/UX Designer · SEO Content AI</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise is the kind of designer every founder needs. He took our ideas and turned them into a polished product we're proud to show.</p>
+    <div class="t-author">
+    <div class="t-avatar">C</div>
+    <div class="t-author-meta">
+      <span class="t-name">Christian Clark</span>
+      <span class="t-role">Founder · White Label Resell</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Collaborating with Praise was a great experience. He brought clarity to the design process and shipped work that was always on point.</p>
+    <div class="t-author">
+    <div class="t-avatar">M</div>
+    <div class="t-author-meta">
+      <span class="t-name">Mustapha Mushin</span>
+      <span class="t-role">Engineer · SEO Content AI</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise helped us define the look and feel of the Young Creators Accelerator. His work made the program feel credible and inspiring.</p>
+    <div class="t-author">
+    <div class="t-avatar">T</div>
+    <div class="t-author-meta">
+      <span class="t-name">Tola Olawale</span>
+      <span class="t-role">Founder · Young Creators Program</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Reliable, skilled, and easy to work with. Praise's freelance work has always been top-notch he delivers on time and then some.</p>
+    <div class="t-author">
+    <div class="t-avatar">G</div>
+    <div class="t-author-meta">
+      <span class="t-name">Goodness Obah</span>
+      <span class="t-role">DevOps · Freelance</span>
+    </div>
+    </div>
+    </div>
+
+    <!-- duplicate set for seamless loop -->
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise brought a rare level of craft and intentionality to our product. Every screen he touched felt more polished and more human.</p>
+    <div class="t-author">
+    <div class="t-avatar">M</div>
+    <div class="t-author-meta">
+      <span class="t-name">Mubarak Idoko</span>
+      <span class="t-role">Co-founder · Lena Africa</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Working with Praise was seamless. He understood our vision quickly and translated it into a beautiful, functional product.</p>
+    <div class="t-author">
+    <div class="t-avatar">O</div>
+    <div class="t-author-meta">
+      <span class="t-name">Osaro Adade</span>
+      <span class="t-role">Co-founder · Lena Africa</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise's designs made the development process smooth. Clear handoffs, thoughtful states, and a keen eye for detail on every page.</p>
+    <div class="t-author">
+    <div class="t-avatar">D</div>
+    <div class="t-author-meta">
+      <span class="t-name">Daniel Ekechukwu</span>
+      <span class="t-role">Full-stack Dev · Dream Alliance</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise redesigned our entire site and gave Royal Eagle Care a fresh, trustworthy online presence. Our clients noticed immediately.</p>
+    <div class="t-author">
+    <div class="t-avatar">F</div>
+    <div class="t-author-meta">
+      <span class="t-name">Felicia Adeniyi</span>
+      <span class="t-role">Founder · Royal Eagle Care</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">A designer who thinks like an engineer. Praise's work on the SEO Content AI dashboard was pixel-perfect and implementation-ready.</p>
+    <div class="t-author">
+    <div class="t-avatar">M</div>
+    <div class="t-author-meta">
+      <span class="t-name">Mcjethro Kalu</span>
+      <span class="t-role">Frontend Dev · SEO Content AI</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise elevated our brand's digital presence significantly. His design sensibility and attention to detail set a new bar for our team.</p>
+    <div class="t-author">
+    <div class="t-avatar">H</div>
+    <div class="t-author-meta">
+      <span class="t-name">Himanshu Raikwar</span>
+      <span class="t-role">Digital Design Lead · White Label Resell</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Great energy, great design sense. Praise made our collaboration effortless and delivered work that exceeded expectations.</p>
+    <div class="t-author">
+    <div class="t-avatar">A</div>
+    <div class="t-author-meta">
+      <span class="t-name">Ankush Singh</span>
+      <span class="t-role">UI/UX Designer · White Label Resell</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise consistently delivered high-quality UI work. His designs were intuitive and made the dev handoff straightforward every time.</p>
+    <div class="t-author">
+    <div class="t-avatar">Z</div>
+    <div class="t-author-meta">
+      <span class="t-name">Zubair Muhammed</span>
+      <span class="t-role">UI/UX Designer · SEO Content AI</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise is the kind of designer every founder needs. He took our ideas and turned them into a polished product we're proud to show.</p>
+    <div class="t-author">
+    <div class="t-avatar">C</div>
+    <div class="t-author-meta">
+      <span class="t-name">Christian Clark</span>
+      <span class="t-role">Founder · White Label Resell</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Collaborating with Praise was a great experience. He brought clarity to the design process and shipped work that was always on point.</p>
+    <div class="t-author">
+    <div class="t-avatar">M</div>
+    <div class="t-author-meta">
+      <span class="t-name">Mustapha Mushin</span>
+      <span class="t-role">Engineer · SEO Content AI</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Praise helped us define the look and feel of the Young Creators Accelerator. His work made the program feel credible and inspiring.</p>
+    <div class="t-author">
+    <div class="t-avatar">T</div>
+    <div class="t-author-meta">
+      <span class="t-name">Tola Olawale</span>
+      <span class="t-role">Founder · Young Creators Program</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="t-card">
+    <div class="t-quote-mark">"</div>
+    <p class="t-quote">Reliable, skilled, and easy to work with. Praise's freelance work has always been top-notch he delivers on time and then some.</p>
+    <div class="t-author">
+    <div class="t-avatar">G</div>
+    <div class="t-author-meta">
+      <span class="t-name">Goodness Obah</span>
+      <span class="t-role">DevOps · Freelance</span>
+    </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+  <div class="container">
+  <div class="section-header reveal">
+    <div>
+    <div class="eyebrow">Services</div>
+    <h2 class="section-title">What I can help <em>your team</em> with.</h2>
+    </div>
+  </div>
+
+  <div class="services-list reveal">
+    <div class="service-row">
+    <div class="service-num">(01)</div>
+    <div class="service-name">AI-augmented design</div>
+    <div class="service-desc">Designing and shipping sites, dashboards, and internal tools end-to-end using Claude Code and modern AI tooling faster iteration, less hand-off.</div>
+    <div class="service-arrow">→</div>
+    </div>
+    <div class="service-row">
+    <div class="service-num">(02)</div>
+    <div class="service-name">Product design</div>
+    <div class="service-desc">End-to-end design of digital products, from early problem framing to shipped, measurable outcomes.</div>
+    <div class="service-arrow">→</div>
+    </div>
+    <div class="service-row">
+    <div class="service-num">(03)</div>
+    <div class="service-name">UX research</div>
+    <div class="service-desc">Interviews, usability studies, and synthesis that turn insights into design decisions teams can rally behind.</div>
+    <div class="service-arrow">→</div>
+    </div>
+    <div class="service-row">
+    <div class="service-num">(04)</div>
+    <div class="service-name">Design systems</div>
+    <div class="service-desc">Scalable, tokenized, component-driven systems that bridge design and engineering.</div>
+    <div class="service-arrow">→</div>
+    </div>
+    <div class="service-row">
+    <div class="service-num">(05)</div>
+    <div class="service-name">Prototyping</div>
+    <div class="service-desc">High-fidelity, interactive prototypes in Figma and Framer for testing, demos, and stakeholder alignment.</div>
+    <div class="service-arrow">→</div>
+    </div>
+    <div class="service-row">
+    <div class="service-num">(06)</div>
+    <div class="service-name">Webflow & Framer</div>
+    <div class="service-desc">Building production-ready marketing sites and landing pages pixel-accurate, responsive, and fast.</div>
+    <div class="service-arrow">→</div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+  <div class="container">
+  <div class="reveal">
+    <div class="eyebrow" style="justify-content:center;">Let's build something</div>
+    <h2>Have an idea?<br><em>Let's talk.</em></h2>
+    <a href="mailto:obahsomto@gmail.com" class="contact-email">
+    obahsomto@gmail.com <span>→</span>
+    </a>
+    <div class="socials">
+     <a href="https://www.linkedin.com/in/praise-obah" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+     <a href="https://drive.google.com/file/d/1p4j-6Jt6zpG4SyP9juyida1Ya-mSd6JV/view?usp=drive_link" target="_blank" rel="noopener" class="social-link">Read.cv</a>
+     <a href="https://www.behance.net/praiseobah" target="_blank" rel="noopener" class="social-link">Behance</a>
+    <a href="#" class="social-link">X / Twitter</a>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+  <div class="container footer-inner">
+  <div>© 2026 Praise Obah. Designed & built with care.</div>
+  <div>Last updated · May 2026</div>
+  </div>
+  </footer>
+
+<div class="lightbox" id="imagePreview">
+  <button class="lightbox-close">&times;</button>
+  <img src="" alt="">
+</div>
+
+<div class="access-modal" id="accessModal">
+  <div class="access-modal-card">
+  <h2>Case Study Access</h2>
+  <p>I'd love to walk you through this case study. Book a quick 30-minute call and I'll show you the full process, research, and results.</p>
+  <a href="https://cal.com/praise-obah-cefegc/30min" target="_blank" rel="noopener" class="btn-book">Book a 30min call →</a>
+  <button class="btn-close-modal">Close</button>
+  </div>
+</div>
+
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+  if (e.isIntersecting) {
+    e.target.classList.add('visible');
+    io.unobserve(e.target);
+  }
+  });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // Smooth nav highlight
+  const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+  const target = document.querySelector(link.getAttribute('href'));
+  if (target) {
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  });
+  });
+  // Project image preview
+  const lightbox = document.getElementById('imagePreview');
+  const lightboxImg = lightbox.querySelector('img');
+  const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+  document.querySelectorAll('.work-thumb img').forEach((img) => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', () => {
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightbox.classList.add('open');
+  });
+  });
+
+  lightboxClose.addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) lightbox.classList.remove('open');
+  });
+  document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') lightbox.classList.remove('open');
+  });
+
+  // Request access modal
+  const accessModal = document.getElementById('accessModal');
+  const accessClose = accessModal.querySelector('.btn-close-modal');
+
+  document.querySelectorAll('.work-link').forEach((link) => {
+  if (link.textContent.trim().startsWith('Request access')) {
+  link.addEventListener('click', (e) => {
+    e.stopPropagation();
+    accessModal.classList.add('open');
+  });
+  }
+  });
+
+  accessClose.addEventListener('click', () => accessModal.classList.remove('open'));
+  accessModal.addEventListener('click', (e) => {
+  if (e.target === accessModal) accessModal.classList.remove('open');
+  });
+  document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') accessModal.classList.remove('open');
+  });
+
+  // Clickable project cards
+  document.querySelectorAll('.work-card').forEach((card) => {
+  const btn = card.querySelector('.work-link');
+  if (!btn) return;
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('a') || e.target.closest('.work-link') || e.target.closest('.work-thumb img')) return;
+    if (btn.tagName === 'A') {
+    btn.click();
+    } else {
+    btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    }
+  });
+  });
+</script>
+</body>
+</html>
