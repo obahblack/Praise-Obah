@@ -4,7 +4,11 @@
       "WebFetch(domain:obah.framer.website)",
       "Bash(cp /Users/newbalance/.claude/image-cache/fac6caf9-20e5-42f1-9516-0353dd650baf/2.png /Users/newbalance/Porfolio/banner.png)",
       "Bash(cp /Users/newbalance/.claude/image-cache/fac6caf9-20e5-42f1-9516-0353dd650baf/3.png /Users/newbalance/Porfolio/avatar.png)",
-      "WebFetch(domain:ibb.co)"
+      "WebFetch(domain:ibb.co)",
+      "WebFetch(domain:royaleagles.com.au)",
+      "WebFetch(domain:young-creators-program.vercel.app)",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Read(//Applications/**)"
     ]
   }
 }
